@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<post>
+  <postAuthor>Moi</postAuthor>
+    <postTitle>Test AJAX</postTitle>
+      <postContent>
+        <content>Voici un test.</content>
+        <content>Test</content>
+      </postContent>
+</post>
