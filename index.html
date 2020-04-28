@@ -1,110 +1,51 @@
-<!doctype html>
-
+<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Food is life</title>
-		<link rel="stylesheet" href="style.css">
-	</head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Page Title</title>
+  </head>
+  <body>
 
-	<body id="bodyElement">
+    <div class="header">
+      <h1>Le blog d'Inès</h1>
+      <p>Un site créé par son chéri.</p>
+    </div>
 
+    <div class="navbar">
+      <a href="#">Le coin jardin</a>
+      <a href="#">Le coin cuisine</a>
+      <a href="#">Le coin vie pratique</a>
+      <a href="#" class="right">Mon livre d'or</a>
+    </div>
 
-	<div id="header">
-		<div class="container">
-			<a id="headerTitle" href="index.html">Le blog de Nesgai</a>
-				<ul id="headerNav">
-					<li><a href="about.html">About</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
-			</div>
-	</div>
+    <div class="row"> <!-- On va diviser le site en deux. Un "side content" et un "main content" -->
+      <div class="side"> <!-- Création du div side content -->
+        <div>
+        </div>
 
-	<div id="content">
-		<div class="postContainer">
-			<div class="post">
-				<div class="postAuthor">
-				<img src="https://pngimage.net/wp-content/uploads/2018/06/food-logo-png-4.png"
-				<span><strong>Nesgai</strong></span>
-				</div>
-				<p class="postDate" id="postDate"></p>
-				<h3 class="postTitle">Coucou les amoureux de la cuisine!</h3>
-				<div class="postContent">
-					<p>Tout d'abord, merci de parcourir mon blog!</p>
-				</div>
-			</div>
-		</div>
+        <div>
+          <p>La vidéo de la semaine :</p>
+          <iframe width="819" height="461" src="https://www.youtube.com/embed/z0O_VYcsIk8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div>Last DIY</div>
+    </div>
+      <div class="main"> <!-- Vous avez compris ! -->
+      <h1>Hello les amoureux des bananes ! <h1>
+      </div>
+    </div>
 
-		<div class="postContainer">
-			<div class="post">
-				<div class="postAuthor">
-				</div>
-				<p class="postDate">Today<p>
-		   <iframe width="800" height="600" src="https://www.youtube.com/embed/QYcw8QbYj8o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				<h3 class="postTitle">Post test</h3>
-				<div class="postContent">
-				<p>Test postContent</p>
-				</div>
-			</div>
-		</div>
+    <div class="footer">
+      <h2>Mes réseaux sociaux</h2>
+        <ul>
+          <li><img src="twitter-3.svg" alt="Logo twitter svg"><a href="#" style="color:#1da1f2">Twitter</a></li>
+          <li><img src="facebookround.svg" alt="Logo facebook"><a href="#" style="color:#405d9a">Facebook</a></li>
+          <li><img src="instagram-2016.svg" alt="Logo instagram"><a href="#">Instagram</a></li>
+        </ul>
+    </div>
 
-		<div class="postContainer">
-			<div class="post">
-				<div class="postAuthor">
-				</div>
-				<p class="postDate">Today<p>
-				<h3 class="postTitle">Post test</h3>
-				<div class="postContent" id="postContentTest">
-					<p>lel</p>
-				<button id="testButton" type="button" onclick="click('posts.txt', changePost)">Changez mon contenu !</button>
-				</div>
-			</div>
-		</div>
-
-		<div class="postContainer">
-			<div class="post">
-				<div class="postAuthor">
-				</div>
-				<p class="postDate">Today<p>
-				<h3 class="postTitle">Post test</h3>
-				<div class="postContent">
-				<p>Test postContent</p>
-				</div>
-			</div>
-		</div>
-
-	</div>
-
-	<div id="footer">
-		<div class="footerContainer">
-			<p>Que penses-tu de mon blog?</p>
-
-			<div id="voteButtons"><br>
-				<button onclick="likeButton()">👍</button>
-    		<button onclick="dislikeButton()">👎</button>
-				<p id="displayVotes"></p>
-			</div>
-
-	</div>
-	</div> <!-- Footer ends this -->
-
-  <script>
-
-function click(url, cFunction) {
-	var xhttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = function testFunction() {
-		if (this.readyState == 4 && this.status == 200) {
-			cFunction(this);
-		}
-	};
-	xhttp.open("GET", url, true);
-	xhttp.send();
-}
-
-function changePost(xhttp) {
-	var txt = document.getElementById("postContentTest").innerHTML;
-	txt = xhttp.responseText;
-}
-	</script>
- </body>
+    <script src="script.js" type="text/javascript"></script>
+  </body>
 </html>
